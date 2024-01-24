@@ -9,12 +9,13 @@ pipeline {
         }
         stage('checking file'){
 steps {
+    script{
             if(fileExists('Jenkinsfile')) {
                 echo "File  Jenkinsfile found!"
             }else{
                 echo "File  Jenkinsfile found!"
             }
-            
+    }
             }
         }
     }
