@@ -7,5 +7,10 @@ pipeline {
                 echo 'Building jenkins pipeline...'
             }
         }
+        stage('checking file'){
+            steps {
+                fileExists 'Jenkinsfile'
+            }
+        }
     }
 }
